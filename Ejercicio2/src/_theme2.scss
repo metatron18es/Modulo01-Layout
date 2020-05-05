@@ -1,0 +1,17 @@
+$baseBox: green;
+$importantBox: greenYellow;
+$warningBox: turquoise;
+$shadowBox: 10px 10px 5px 0px rgba(0,0,0,0.75);
+
+@mixin primaryText {
+  font-family: Verdana;
+  font-weight: 300;
+  font-size: 18px;
+  color: grey
+}
+@mixin secundaryText {
+  font-family: tahoma;
+  font-weight: 600;
+  font-size: 24px;
+  color: rebeccapurple;
+}

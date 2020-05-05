@@ -1,0 +1,17 @@
+$baseBox: red;
+$importantBox: salmon;
+$warningBox: coral;
+$shadowBox: -10px 10px 5px 0px rgba(0,0,0,0.75);
+
+@mixin primaryText {
+  font-family: Arial;
+  font-weight: 600;
+  font-size: 25px;
+  color: blue
+}
+@mixin secundaryText {
+  font-family: sans-serif;
+  font-weight: 300;
+  font-size: 20px;
+  color: yellow
+}
