@@ -1,0 +1,84 @@
+$color1: red;
+$color2: blue;
+$color3: green;
+
+body {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+  .container {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    height: calc(calc(100% - 40px) / 3);
+    margin: 5px 0;
+  }
+    .box {
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: center;
+      align-items: center;
+
+      width: calc(calc(100% - 100px) / 9);
+      height: 100%;
+      margin: 0 5px;
+      border-radius: 5px;
+    }
+
+
+    .color-1 {
+      .box {
+        background-color: $color1;
+    
+        @for $i from 1 through 4 {
+          &.darken-#{$i} {
+            background-color: darken($color1, ($i * 8));
+          }
+          &.lighten-#{$i} {
+            background-color: lighten($color1, ($i * 8));
+          }
+        }
+      }
+    }
+    .color-2 {
+      .box {
+        background-color: $color2;
+    
+        @for $i from 1 through 4 {
+          &.darken-#{$i} {
+            background-color: darken($color2, ($i * 8));
+          }
+          &.lighten-#{$i} {
+            background-color: lighten($color2, ($i * 8));
+          }
+        }
+      }
+    }
+    .color-3 {
+      .box {
+        background-color: $color3;
+    
+        @for $i from 1 through 4 {
+          &.darken-#{$i} {
+            background-color: darken($color3, ($i * 8));
+          }
+          &.lighten-#{$i} {
+            background-color: lighten($color3, ($i * 8));
+          }
+        }
+      }
+    }
+    .color-box-text {
+      font: 400 20px/1.2em Arial;
+      color: white;
+    }
